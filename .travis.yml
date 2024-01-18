@@ -10,6 +10,8 @@ script:
 
 deploy: 
   provider: elasticbeanstalk
+  access_key_id: ${AWS_ACCESS_KEY}
+  secret_access_key: ${AWS_SECRET_KEY}
   region: "eu-west-2"
   app: "docker"
   env: "Docker-env"
@@ -17,5 +19,4 @@ deploy:
   bucket_path: "docker"
   on:
     branch: master
-  access_key_id: "AKIAXYKJRJPNGTRSVOPZ"
-  secret_access_key: "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"
+  
